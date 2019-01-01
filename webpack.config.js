@@ -34,12 +34,12 @@ module.exports = {
       },
       {
         test: /\.(ico|eot|otf|webp|ttf|woff|woff2)(\?.*)?$/,
-        use: 'file-loader?limit=100000'
+        use: 'file-loader?limit=1024'
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif|svg|bmp)$/i,
         use: [
-          'file-loader?limit=100000',
+          'file-loader?limit=1024',
           {
             loader: 'img-loader',
             options: {
